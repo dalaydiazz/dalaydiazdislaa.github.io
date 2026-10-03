@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalay Diaz Disla | Personal Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f4ef;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .button:hover {
+            background: #444;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Dalay Diaz Disla</h1>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#goals">Goals</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2>Hi, I'm Dalay 👋</h2>
+
+            <p>
+                I'm an Accounting student at Rutgers University with a minor
+                in Communications. I'm interested in accounting, financial
+                services, and building a career in public accounting.
+            </p>
+
+            <a href="#about" class="button">Learn More</a>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p>
+                I am currently pursuing my Bachelor of Science at Rutgers
+                University. I am studying Accounting and developing my
+                communication, business, and financial skills.
+            </p>
+        </section>
+
+        <section id="goals">
+            <h2>My Goals</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>📚 Education</h3>
+                    <p>
+                        Continue developing my accounting and business
+                        knowledge at Rutgers University.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>💼 Career</h3>
+                    <p>
+                        Gain internship experience in accounting, financial
+                        services, and public accounting.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🔎 Future</h3>
+                    <p>
+                        Earn my CPA license and eventually specialize in
+                        forensic accounting.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <p>
+                Interested in connecting? Feel free to reach out!
+            </p>
+
+            <a href="mailto:your-email@example.com" class="button">
+                Email Me
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Dalay Diaz Disla</p>
+    </footer>
+
+</body>
+</html>
