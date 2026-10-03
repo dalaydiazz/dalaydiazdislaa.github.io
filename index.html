@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dalay Diaz Disla | Personal Website</title>
+
+    <title>Dalay Diaz Disla | Portfolio</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -13,192 +16,722 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f7f4ef;
-            color: #222;
-            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #1f1f1f;
         }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         header {
-            background: #222;
-            color: white;
-            padding: 20px 8%;
+            height: 75px;
+            border-bottom: 1px solid #eeeeee;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            background: white;
         }
 
-        header h1 {
-            font-size: 24px;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .rbs {
+            font-size: 25px;
+            font-weight: bold;
+            color: #b5121b;
+        }
+
+        .portfolio-name {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            margin-left: 20px;
+            color: #333333;
+            font-size: 14px;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #b5121b;
         }
+
+        .resume-button {
+            background: #1f1f1f;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           HERO / ABOUT SECTION
+        ========================= */
 
         .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 40px 110px;
+
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 80px;
+
             align-items: center;
-            text-align: center;
-            padding: 40px 20px;
         }
 
-        .hero h2 {
-            font-size: 48px;
+
+        /* Profile */
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #eeeeee;
+        }
+
+        .profile h3 {
+            margin-top: 15px;
+            font-size: 22px;
+        }
+
+        .profile h4 {
+            margin-top: 5px;
+            color: #8f1820;
+            font-size: 14px;
+        }
+
+        .profile p {
+            margin-top: 5px;
+            color: #777777;
+            font-size: 13px;
+        }
+
+
+        /* Hero Text */
+
+        .tag {
+            display: inline-block;
+            background: #f5e4e4;
+            color: #8f1820;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
             margin-bottom: 15px;
         }
 
-        .hero p {
-            max-width: 650px;
-            font-size: 18px;
-            color: #555;
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.05;
+            margin-bottom: 25px;
+            max-width: 700px;
         }
 
-        .button {
-            display: inline-block;
+        .hero-text p {
+            color: #555555;
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 720px;
+        }
+
+        .hero-buttons {
             margin-top: 25px;
-            padding: 12px 25px;
-            background: #222;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
-
-        .button:hover {
-            background: #444;
-        }
-
-        section {
-            padding: 70px 8%;
-        }
-
-        section h2 {
-            margin-bottom: 20px;
-            font-size: 32px;
-        }
-
-        .cards {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 25px;
+            align-items: center;
         }
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            flex: 1;
-            min-width: 250px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        .email-button {
+            text-decoration: none;
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            color: #222222;
+            padding: 11px 18px;
+            border-radius: 25px;
+            font-size: 13px;
         }
 
-        .card h3 {
+        .email-button:hover {
+            background: #f5f5f5;
+        }
+
+        .linkedin-button {
+            text-decoration: none;
+            color: #222222;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .linkedin-button:hover {
+            color: #b5121b;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-section {
+            background: #fafafa;
+            padding: 80px 8%;
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 34px;
             margin-bottom: 10px;
         }
 
-        footer {
-            text-align: center;
-            background: #222;
-            color: white;
-            padding: 25px;
+        .section-description {
+            color: #666666;
+            max-width: 700px;
+            margin-bottom: 35px;
+            line-height: 1.6;
         }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid #e5e5e5;
+            padding: 12px 18px;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PROJECTS / EXPERIENCE
+        ========================= */
+
+        .projects-section {
+            padding: 90px 8%;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .project {
+            border-top: 3px solid #b5121b;
+            padding: 30px;
+            background: #fafafa;
+            min-height: 250px;
+        }
+
+        .project-number {
+            font-size: 13px;
+            color: #999999;
+            margin-bottom: 15px;
+        }
+
+        .project h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            color: #666666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #8f1820;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #111111;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #cccccc;
+            margin-bottom: 25px;
+        }
+
+        .contact a {
+            display: inline-block;
+            background: white;
+            color: #111111;
+            padding: 12px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .contact a:hover {
+            background: #eeeeee;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111111;
+            color: #777777;
+            text-align: center;
+            padding: 25px;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a:not(.resume-button) {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 70px 25px;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
     </style>
 </head>
 
+
 <body>
 
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
     <header>
-        <h1>Dalay Diaz Disla</h1>
+
+        <div class="logo">
+
+            <span class="rbs">RBS</span>
+
+            <span class="portfolio-name">
+                Dalay's Portfolio
+            </span>
+
+        </div>
+
 
         <nav>
-            <a href="#about">About</a>
-            <a href="#goals">Goals</a>
-            <a href="#contact">Contact</a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a
+                href="#"
+                class="resume-button"
+            >
+                Download Resume
+            </a>
+
         </nav>
+
     </header>
 
-    <main>
 
-        <section class="hero">
-            <h2>Hi, I'm Dalay 👋</h2>
+
+    <!-- =========================
+         PERSONAL STATEMENT
+    ========================= -->
+
+    <section class="hero" id="about">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="profile">
+
+            <!--
+                Replace "profile.jpg" with the name
+                of your actual photo once you upload it
+                to your GitHub repository.
+            -->
+
+            <img
+                src="https://via.placeholder.com/190"
+                alt="Dalay Diaz Disla"
+                class="profile-picture"
+            >
+
+            <h3>
+                Dalay Diaz Disla
+            </h3>
+
+            <h4>
+                Rutgers Business School
+            </h4>
 
             <p>
-                I'm an Accounting student at Rutgers University with a minor
-                in Communications. I'm interested in accounting, financial
-                services, and building a career in public accounting.
+                Accounting Student
             </p>
-
-            <a href="#about" class="button">Learn More</a>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
 
             <p>
-                I am currently pursuing my Bachelor of Science at Rutgers
-                University. I am studying Accounting and developing my
-                communication, business, and financial skills.
+                Class of 2029
             </p>
-        </section>
 
-        <section id="goals">
-            <h2>My Goals</h2>
+        </div>
 
-            <div class="cards">
 
-                <div class="card">
-                    <h3>📚 Education</h3>
-                    <p>
-                        Continue developing my accounting and business
-                        knowledge at Rutgers University.
-                    </p>
-                </div>
 
-                <div class="card">
-                    <h3>💼 Career</h3>
-                    <p>
-                        Gain internship experience in accounting, financial
-                        services, and public accounting.
-                    </p>
-                </div>
+        <!-- RIGHT SIDE -->
 
-                <div class="card">
-                    <h3>🔎 Future</h3>
-                    <p>
-                        Earn my CPA license and eventually specialize in
-                        forensic accounting.
-                    </p>
-                </div>
+        <div class="hero-text">
+
+            <span class="tag">
+                Accounting Student
+            </span>
+
+            <h1>
+                Building a future in accounting, finance, and business.
+            </h1>
+
+            <p>
+                I am an Accounting student at Rutgers University with a minor
+                in Communications, developing strong analytical, organizational,
+                and communication skills while preparing for a career in public
+                accounting and forensic accounting.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:dd1386@scarletmail.rutgers.edu"
+                    class="email-button"
+                >
+                    Email Me
+                </a>
+
+
+                <!-- LINKEDIN -->
+
+                <a
+                    href="https://www.linkedin.com/in/dalaydiazdisla"
+                    target="_blank"
+                    class="linkedin-button"
+                >
+                    LinkedIn Profile →
+                </a>
 
             </div>
-        </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
+        </div>
 
-            <p>
-                Interested in connecting? Feel free to reach out!
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section
+        class="skills-section"
+        id="skills"
+    >
+
+        <div class="section-container">
+
+            <h2 class="section-title">
+                Professional Skills
+            </h2>
+
+            <p class="section-description">
+                Skills I am developing through my academic experience,
+                work experience, and professional development.
             </p>
 
-            <a href="mailto:your-email@example.com" class="button">
-                Email Me
-            </a>
-        </section>
 
-    </main>
+            <div class="skills">
+
+                <span class="skill">
+                    Accounting
+                </span>
+
+                <span class="skill">
+                    Financial Analysis
+                </span>
+
+                <span class="skill">
+                    Microsoft Excel
+                </span>
+
+                <span class="skill">
+                    Communication
+                </span>
+
+                <span class="skill">
+                    Customer Service
+                </span>
+
+                <span class="skill">
+                    Problem Solving
+                </span>
+
+                <span class="skill">
+                    Teamwork
+                </span>
+
+                <span class="skill">
+                    Organization
+                </span>
+
+                <span class="skill">
+                    Time Management
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS / EXPERIENCE
+    ========================= -->
+
+    <section
+        class="projects-section"
+        id="projects"
+    >
+
+        <div class="section-container">
+
+            <h2 class="section-title">
+                My Work
+            </h2>
+
+            <p class="section-description">
+                My professional experiences have helped me develop
+                communication, teamwork, organization, and problem-solving
+                skills.
+            </p>
+
+
+            <div class="projects">
+
+
+                <!-- EXPERIENCE 1 -->
+
+                <div class="project">
+
+                    <div class="project-number">
+                        EXPERIENCE 01
+                    </div>
+
+                    <h3>
+                        College Ave Recreation
+                    </h3>
+
+                    <p>
+                        Worked at the College Ave Recreation Center at
+                        Rutgers University, developing customer service,
+                        communication, teamwork, and organizational skills
+                        while supporting daily operations.
+                    </p>
+
+                    <a href="#">
+                        Learn More →
+                    </a>
+
+                </div>
+
+
+
+                <!-- EXPERIENCE 2 -->
+
+                <div class="project">
+
+                    <div class="project-number">
+                        EXPERIENCE 02
+                    </div>
+
+                    <h3>
+                        Poll Worker
+                    </h3>
+
+                    <p>
+                        Worked as a poll worker and supported the election
+                        process by assisting voters, following procedures,
+                        and helping maintain an organized and professional
+                        environment.
+                    </p>
+
+                    <a href="#">
+                        Learn More →
+                    </a>
+
+                </div>
+
+
+
+                <!-- EXPERIENCE 3 -->
+
+                <div class="project">
+
+                    <div class="project-number">
+                        EXPERIENCE 03
+                    </div>
+
+                    <h3>
+                        Rutgers Accounting
+                    </h3>
+
+                    <p>
+                        Pursuing a Bachelor of Science in Accounting at
+                        Rutgers University while developing skills in
+                        business, financial analysis, communication, and
+                        professional problem solving.
+                    </p>
+
+                    <a href="#">
+                        Learn More →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section
+        class="contact"
+        id="contact"
+    >
+
+        <h2>
+            Let's Connect.
+        </h2>
+
+        <p>
+            I am interested in internship opportunities in accounting,
+            financial services, and public accounting.
+        </p>
+
+        <a href="mailto:dd1386@scarletmail.rutgers.edu">
+            Get In Touch
+        </a>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
-        <p>© 2026 Dalay Diaz Disla</p>
+
+        <p>
+            © 2026 Dalay Diaz Disla | Rutgers Business School
+        </p>
+
     </footer>
 
+
 </body>
+
 </html>
